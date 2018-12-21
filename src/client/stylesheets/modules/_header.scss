@@ -1,0 +1,14 @@
+// Header module
+.header {
+  display: flex;
+  align-items: center;
+  background-color: map-get($colors, primary);
+  height: 100px;
+  a {
+    margin-left: 50px;
+    font-size: 40px;
+    color: map-get($colors, ui-light);
+    text-decoration: none;
+    font-family: Geneva;
+  }
+}

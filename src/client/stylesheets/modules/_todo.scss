@@ -1,0 +1,88 @@
+// Todo module.
+.todo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-bottom: 1px solid map-get($colors, lightgray);
+
+  .todo-link {
+    font-size: 25px;
+    font-family: Geneva;
+    color: darkslategray
+  }
+
+  &--status-complete .todo-link {
+    color: map-get($colors, lightgray);
+    text-decoration: line-through;
+  }
+
+
+  &--filtered {
+    display: none;
+  }
+
+  .delete { 
+    margin-left: auto;
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    color: map-get($colors, gray);
+  }
+
+  .archive {
+    background: map-get($colors, green);
+    color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    height: 20px;
+  }
+
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    border-style: dashed;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    margin-right: 25px;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    border-style: dashed;
+    border-width: 1px;
+    background-color: map-get($colors, lightgray);
+  }
+  
+
+  input:checked ~ .checkmark {
+    background-color: map-get($colors, green);
+  }
+  
+  .checkmark:after {
+    content: "";
+    display: none;
+  }
+  
+  input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .checkmark:after {
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}

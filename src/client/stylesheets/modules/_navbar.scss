@@ -1,0 +1,34 @@
+// Navbar module
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 40px;
+  align-items: center;
+  background: map-get($colors, lightgray);
+
+  .nav-items {
+    margin-left: 50px;
+    font-size: 14px;
+    font-family: Geneva
+  }
+
+  .archive-all {
+    background: map-get($colors, green);
+    color: white;
+    border-radius: 5px;
+    margin-right: 40px;
+    height: 20px;
+  }
+
+  &__item {
+    text-decoration: none;
+    color: map-get($colors, gray);
+    padding: 15px 15px 15px 0px;
+  }
+
+  &__item--active {
+    color: map-get($colors, darkgray);
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,33 @@
+.todos-page {
+    display: flex;
+    flex-direction: column;
+
+    .input-form {
+        margin: 20px;
+        align-self: center;
+        input {
+            height: 30px;
+            width: 400px;
+            border-radius: 5px;
+            font-size: 20px;
+            padding: 10px;
+            font-family: Geneva;
+            background-image: linear-gradient(map-get($colors, lightgray), white);
+        }
+    }
+
+    .remaining-todos {
+        font-size: 18px;
+        margin: 15px;
+        font-family: Geneva;
+
+        .complete {
+            margin-left: 10px;
+            font-size: 10px;
+            background: transparent;
+            border: none;
+            font-weight: bold;
+            color: map-get($colors, primary);
+        }
+    }
+}
